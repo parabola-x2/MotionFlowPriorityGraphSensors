@@ -1,6 +1,39 @@
 # README
 
-### Software
+### Research objectives
+
+This research focuses on algorithms designed to compensate for the impact of environmental conditions on automotive sensor data. The primary objective is to enhance existing algorithms in order to increase the informational value of sensor outputs. A key challenge addressed in this thesis is the simulation of distorted sensor data under diverse environmental scenarios—including rain, snow, fog, lightning, solar reflections, and shading—since such data is difficult to obtain in real-world testing. While standard sensor data can be reliably acquired through test benches, replicating adverse conditions is more complex. To overcome this limitation, synthetic data is employed to generate varied environmental conditions, thereby enabling the development and improvement of robust algorithms.
+
+Some of the problems that can be visualized are:
+
+|                                     |                                                                              |
+| ----------------------------------- | ---------------------------------------------------------------------------- |
+| ![](.gitbook/assets/fog.jpeg)       | ![](.gitbook/assets/jerusalem-light-rail-sand-dust-storm-september-2015.jpg) |
+| ![](.gitbook/assets/dust_storm.jpg) | ![](.gitbook/assets/rain_big.jpeg)                                           |
+
+Recreation of images in virtual world with in clear blue sky and simulated rain droplets
+
+<figure><img src=".gitbook/assets/grafik.png" alt=""><figcaption><p><strong>Clear blue sky . Left Side Frame 1 &#x26; Right Side Frame 2</strong></p></figcaption></figure>
+
+<figure><img src=".gitbook/assets/grafik (1).png" alt=""><figcaption><p><strong>Detection of moving points from one frame to another</strong></p></figcaption></figure>
+
+<figure><img src=".gitbook/assets/grafik (2).png" alt=""><figcaption><p><strong>Night time with rain . Left Side Frame 1 &#x26; Right Side Frame 2</strong></p></figcaption></figure>
+
+<figure><img src=".gitbook/assets/grafik (3).png" alt=""><figcaption><p><strong>Detection of cars as well as rain drops from one frame to another</strong></p></figcaption></figure>
+
+As we see the rain droplets has created considerable noise, and therefore a challenge in reliably detecting the vehicle movements.
+
+### Proposed Solution
+
+<figure><img src=".gitbook/assets/grafik (4).png" alt=""><figcaption><p><strong>Situational Awareness</strong></p></figcaption></figure>
+
+By methods using situational awareness, the detection of relevant objects has considerably increased. By increasing priority to those elements in the sensor snapshot which are more meaninful to the situation, it is possible to compute better results.
+
+### A virtual image with ground truth and object detection:
+
+Image of cars shown from driver perspective along with detected objects in the virtual sensor snapshot
+
+<figure><img src=".gitbook/assets/snapshot-abstract-dec2016.png" alt=""><figcaption></figcaption></figure>
 
 Development of sensor model to support the rapid development and testing of downstream ADAS algorithms. Synthetic scene generation is performed using Hexagon VTD, which triggers dynamic scenarios through OpenSceneGraph and XML‑based OpenDrive.
 
